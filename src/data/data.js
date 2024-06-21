@@ -45,6 +45,10 @@ export const primaryLinks = [
     name: "Gallery",
     path: RouterData.gallery,
   },
+  {
+    name: "Brochure",
+    path: RouterData.brochure,
+  },
 ];
 
 export const socialMediaLinks = {

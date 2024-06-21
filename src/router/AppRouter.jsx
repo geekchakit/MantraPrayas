@@ -11,6 +11,7 @@ const Gallery = lazy(() => import("../_root/Pages/Gallery"));
 const Faculties = lazy(() => import("../_root/Pages/Faculties"));
 const Courses = lazy(() => import("../_root/Pages/Courses"));
 const Contact = lazy(() => import("../_root/Pages/Contact"));
+const Brochure = lazy(() => import("../_root/Pages/Brochure"));
 
 const AppRouter = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const AppRouter = createBrowserRouter([
       {
         path: RouterData.studyMaterials,
         element: <StudyMaterials />,
+      },
+      {
+        path: RouterData.brochure,
+        element: <Brochure />,
       },
     ],
   },
