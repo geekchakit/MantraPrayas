@@ -126,8 +126,7 @@ const MobileHeader = () => {
                       </Link>
                     </div>
                     <span className="font-secondary text-xs capitalize text-center px-4">
-                      {new Date().getFullYear()} @copyright Vidyamrutham Study
-                      Centre
+                      {new Date().getFullYear()} @copyright Mantra Prayas
                     </span>
                   </div>
                 </div>

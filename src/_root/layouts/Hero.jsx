@@ -21,7 +21,7 @@ const Hero = () => {
         <Wrapper>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full ">
             <Typography
-              className="font-primary font-bold text-5xl leading-[1.2]"
+              className="font-primary font-bold text-4xl md:text-5xl leading-[1.2]"
               variant="h1"
               color="white"
               data-aos="fade-up"
@@ -68,11 +68,11 @@ const Hero = () => {
             </div>
           </div>
         </Wrapper>
-        <div className="w-full h-full overflow-hidden sm:max-w-screen-2xl mx-auto sm:px-4">
+        <div className="w-full overflow-hidden sm:max-w-screen-xl mx-auto sm:px-4">
           <img
             src={imagesData.heroImage}
             alt="Vidyamrutham Study Center"
-            className="w-full h-full origin-bottom object-contain scale-[1.5] mt-40 sm:scale-100 sm:mt-0"
+            className="w-full object-contain scale-[1]  sm:mt-0"
           />
         </div>
       </div>
