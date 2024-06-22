@@ -1,1 +1,1 @@
-export const API_URL = `http://vidyamrutham.in/api`;
+export const API_URL = `https://api.mantraprayas.in/api`;
