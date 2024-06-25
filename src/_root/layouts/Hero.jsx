@@ -46,12 +46,14 @@ const Hero = () => {
                   variant="filled"
                   className="bg-white text-MainPrimary-500 font-primary  hover:bg-gray-200 rounded-full "
                   size="lg"
-                  onClick={() => {
-                    navigate(hero.cta[0].link);
-                  }}
                   data-aos="fade-up"
                 >
-                  Join Now
+                  <a
+                    href="./assets/PRAYAS-Brochure.pdf"
+                    download="PRAYAS-Brochure.pdf"
+                  >
+                    Join Now
+                  </a>
                 </Button>
                 <Button
                   variant="text"

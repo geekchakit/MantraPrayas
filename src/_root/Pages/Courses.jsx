@@ -46,8 +46,9 @@ const Courses = () => {
               variant="paragraph"
               className="mt-8 max-w-[500px] mx-auto font-primary"
             >
-              {data.CourseGalleryFacultyText &&
-                data.CourseGalleryFacultyText[0].courseText}
+              {(data.CourseGalleryFacultyText &&
+                data.CourseGalleryFacultyText[0]?.courseText) ||
+                ""}
             </Typography>
           </div>
           <div

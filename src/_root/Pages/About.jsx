@@ -7,6 +7,7 @@ import Testmonial from "../layouts/Testmonial";
 import { useEffect, useState } from "react";
 import { API_URL } from "../../utils/Constant";
 import axios from "axios";
+import PlayStoreAd from "../layouts/PlayStoreAd";
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -166,13 +167,14 @@ const About = () => {
                 variant="h4"
                 className="font-primary font-semibold text-MainBlack-400"
               >
-                {block1Title}
+                {block1Title || "Experienced Mentors"}
               </Typography>
               <Typography
                 variant="paragraph"
                 className="font-primary text-MainBlack-300 mt-2"
               >
-                {block1Text}
+                {block1Text ||
+                  "Our Faculties comprises experienced mentors committed to guiding students towards success"}
               </Typography>
             </div>
           </div>
@@ -192,13 +194,14 @@ const About = () => {
                 variant="h4"
                 className="font-primary font-semibold text-MainBlack-400"
               >
-                {block2Title}
+                {block2Title || "Tailored Support"}
               </Typography>
               <Typography
                 variant="paragraph"
                 className="font-primary text-MainBlack-300 mt-2"
               >
-                {block2Text}
+                {block2Text ||
+                  "We focus on personalized attention. Each student receives tailored support, boosting confidence and understanding."}
               </Typography>
             </div>
           </div>
@@ -218,13 +221,14 @@ const About = () => {
                 variant="h4"
                 className="font-primary font-semibold text-MainBlack-400"
               >
-                {block3Title}
+                {block3Title || "Cutting-Edge Facilities"}
               </Typography>
               <Typography
                 variant="paragraph"
                 className="font-primary text-MainBlack-300 mt-2"
               >
-                {block3Text}
+                {block3Text ||
+                  "Our cutting-edge facilities offer an immersive learning setting with modern resources for the best learning experiences."}
               </Typography>
             </div>
           </div>
@@ -244,19 +248,21 @@ const About = () => {
                 variant="h4"
                 className="font-primary font-semibold text-MainBlack-400"
               >
-                {block4Title}
+                {block4Title || "Proven Track Record"}
               </Typography>
               <Typography
                 variant="paragraph"
                 className="font-primary text-MainBlack-300 mt-2"
               >
-                {block4Text}
+                {block4Text ||
+                  "Benefit from our track record of academic excellence, supported by countless success stories from our students."}
               </Typography>
             </div>
           </div>
         </div>
       </Wrapper>
       <Testmonial />
+      <PlayStoreAd />
     </div>
   );
 };

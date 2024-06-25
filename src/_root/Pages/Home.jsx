@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { API_URL } from "../../utils/Constant";
 import { setHomePageData } from "../../store/slices/MainSlices";
+import PlayStoreAd from "../layouts/PlayStoreAd";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -53,6 +54,7 @@ const Home = () => {
       <About2 />
       <Facuities />
       <Testmonial />
+      <PlayStoreAd />
       <ContactSection />
     </>
   );

@@ -12,6 +12,7 @@ import {
 } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import PlayStoreAd from "../layouts/PlayStoreAd";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -276,6 +277,7 @@ const Contact = () => {
           </div>
         </Wrapper>
       </div>
+      <PlayStoreAd />
     </div>
   );
 };

@@ -11,20 +11,13 @@ const Brochure = () => {
             variant="h2"
             className="font-primary font-bold text-MainBlack-500 max-w-[500px] mx-auto "
           >
-            Brochure
+            Study Materials
           </Typography>
           <img
             src={imagesData.vector2}
             className="w-full mt-4 max-w-[500px]  mx-auto h-[30px] object-contain"
             alt="vector 3"
           />
-          <Typography
-            variant="paragraph"
-            className="mt-8 max-w-[450px] mx-auto font-primary"
-          >
-            Download our brochure to learn more about our courses and
-            facilities.
-          </Typography>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-16">
           <a
@@ -37,7 +30,7 @@ const Brochure = () => {
               <img src="./assets/PRAYAS-Brochure-1.png" />
             </div>
             <Button className="w-full rounded-sm font-primary bg-primary hover:bg-primary/80">
-              Read More
+              Download
             </Button>
           </a>
         </div>
