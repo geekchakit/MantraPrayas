@@ -38,26 +38,20 @@ const Gallery = () => {
     setImage(img);
   };
 
-  const [data, setData] = useState({
-    images: [],
-    videos: [],
-  });
+  const [data, setData] = useState([]);
+  const [videoData, setVideoData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await axios.get(`${API_URL}/getGalleryPageData`);
         const res2 = await axios.get(`${API_URL}/getYoutube`);
-        setData({
-          ...data,
-          images: res.data,
-          videos: res2.data,
-        });
+        setData(res.data);
+        setVideoData(res2.data);
       } catch (error) {
         console.log(error);
       }
     };
-
     fetchData();
   }, []);
 
@@ -107,8 +101,8 @@ const Gallery = () => {
                   {tabsData[0].name}
                 </Typography>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
-                  {data.images.galleryData &&
-                    data.images.galleryData.map((img, i) => (
+                  {data.galleryData &&
+                    data.galleryData.map((img, i) => (
                       <div
                         key={i}
                         className="w-full h-full rounded-2xl overflow-hidden cursor-pointer group transition-all ease-in-out duration-300"
@@ -131,17 +125,18 @@ const Gallery = () => {
                 >
                   {tabsData[1].name}
                 </Typography>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-                  {data.videos.map((video, i) => (
-                    <div key={i} className="w-full h-full">
-                      <iframe
-                        src={video.link}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                        className="w-full h-full min-h-[250px]"
-                      ></iframe>
-                    </div>
-                  ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
+                  {videoData &&
+                    videoData.map((video, i) => (
+                      <div key={i} className="w-full h-full">
+                        <iframe
+                          src={video.link}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                          className="w-full h-full min-h-[250px]"
+                        ></iframe>
+                      </div>
+                    ))}
                 </div>
               </TabPanel>
             </TabsBody>
