@@ -45,14 +45,21 @@ const Gallery = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(`${API_URL}/getGalleryPageData`);
-        const res2 = await axios.get(`${API_URL}/getYoutube`);
         setData(res.data.galleryData);
-        setVideoData(res2.data);
-        console.log(res.data, res2.data);
       } catch (error) {
         console.log(error);
       }
     };
+    const fetchVidoeData = async () => {
+      try {
+        const res2 = await axios.get(`${API_URL}/getYoutube`);
+        setVideoData(res2.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchVidoeData();
     fetchData();
   }, []);
 
