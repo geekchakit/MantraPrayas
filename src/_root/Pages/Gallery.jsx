@@ -46,7 +46,7 @@ const Gallery = () => {
       try {
         const res = await axios.get(`${API_URL}/getGalleryPageData`);
         const res2 = await axios.get(`${API_URL}/getYoutube`);
-        setData(res.data);
+        setData(res.data.galleryData);
         setVideoData(res2.data);
       } catch (error) {
         console.log(error);
@@ -101,8 +101,8 @@ const Gallery = () => {
                   {tabsData[0].name}
                 </Typography>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
-                  {data.galleryData &&
-                    data.galleryData.map((img, i) => (
+                  {data &&
+                    data.map((img, i) => (
                       <div
                         key={i}
                         className="w-full h-full rounded-2xl overflow-hidden cursor-pointer group transition-all ease-in-out duration-300"
