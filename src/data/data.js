@@ -47,7 +47,11 @@ export const primaryLinks = [
   },
   {
     name: " Study Materials",
-    path: RouterData.brochure,
+    path: RouterData.studyMaterials,
+  },
+  {
+    name: "Resources",
+    path: RouterData.resourses,
   },
 ];
 

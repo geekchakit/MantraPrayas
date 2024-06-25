@@ -7,5 +7,4 @@ export const RouterData = {
   contact: "/contact",
   resourses: "/resourses",
   studyMaterials: "/study-materials",
-  brochure: "/brochure",
 };
