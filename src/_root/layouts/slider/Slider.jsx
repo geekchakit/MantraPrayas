@@ -1,30 +1,10 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { RiArrowRightSLine } from "react-icons/ri";
-
-const images = [
-  {
-    image_link: "https://via.placeholder.com/800x600",
-    alt: "image",
-  },
-  {
-    image_link: "https://via.placeholder.com/800x600",
-    alt: "image",
-  },
-  {
-    image_link: "https://via.placeholder.com/800x600",
-    alt: "image",
-  },
-  {
-    image_link: "https://via.placeholder.com/800x600",
-    alt: "image",
-  },
-  {
-    image_link: "https://via.placeholder.com/800x600",
-    alt: "image",
-  },
-];
+import { useSelector } from "react-redux";
 
 const Slider = () => {
+  const images = useSelector((state) => state.main.homePageData.homeCaroselData);
+  console.log(images);
   return (
     <section
       className="w-full h-full py-[40px]"
