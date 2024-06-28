@@ -20,7 +20,7 @@ const Header = () => {
           >
             <img
               src={imagesData.logo}
-              alt="Vidyamrutham Study Center"
+              alt="MantraPrayas Study Center"
               className="size-[60px] object-contain"
             />
             <div>

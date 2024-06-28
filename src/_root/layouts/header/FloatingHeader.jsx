@@ -86,7 +86,7 @@ const FloatingHeader = () => {
           >
             <img
               src={imagesData.logo}
-              alt="Vidyamrutham Study Center"
+              alt="MantraPrayas Study Center"
               className="size-[60px] object-contain"
             />
             <div>
@@ -142,7 +142,7 @@ const FloatingHeader = () => {
               >
                 <img
                   src={imagesData.logo}
-                  alt="Vidyamrutham Study Center"
+                  alt="MantraPrayas Study Center"
                   className="size-[60px] object-contain"
                 />
                 <div>
@@ -230,7 +230,7 @@ const FloatingHeader = () => {
                         </Link>
                       </div>
                       <span className="font-secondary text-xs capitalize text-center px-4">
-                        {new Date().getFullYear()} @copyright Vidyamrutham Study
+                        {new Date().getFullYear()} @copyright MantraPrayas Study
                         Centre
                       </span>
                     </div>

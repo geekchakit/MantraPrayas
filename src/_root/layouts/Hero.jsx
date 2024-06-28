@@ -73,7 +73,7 @@ const Hero = () => {
         <div className="w-full overflow-hidden sm:max-w-screen-xl mx-auto sm:px-4">
           <img
             src={imagesData.heroImage}
-            alt="Vidyamrutham Study Center"
+            alt="MantraPrayas Study Center"
             className="w-full object-contain scale-[1]  sm:mt-0"
           />
         </div>
