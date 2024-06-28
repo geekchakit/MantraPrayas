@@ -6,7 +6,7 @@ const Slider = () => {
   const images = useSelector(
     (state) => state.main.homePageData.homeCaroselData
   );
-  // console.log(images);
+  console.log(images);
   return (
     <section
       className="w-full h-full py-[40px]"
@@ -32,7 +32,7 @@ const Slider = () => {
               {images &&
                 images.map((item, index) => (
                   <SplideSlide key={index} className="w-full">
-                    <div className="w-full h-[540px] rounded-2xl overflow-hidden">
+                    <div className="w-full h-auto rounded-2xl overflow-hidden">
                       <img
                         src={item.image_link}
                         alt={item.alt}
