@@ -52,7 +52,7 @@ const Gallery = () => {
     };
     const fetchVidoeData = async () => {
       try {
-        const res2 = await axios.get(`${API_URL}/getYoutube`);
+        const res2 = await axios.post(`${API_URL}/getYoutube`);
         setVideoData(res2.data);
       } catch (error) {
         console.log(error);
