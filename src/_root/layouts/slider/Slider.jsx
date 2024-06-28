@@ -3,8 +3,10 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { useSelector } from "react-redux";
 
 const Slider = () => {
-  const images = useSelector((state) => state.main.homePageData.homeCaroselData);
-  console.log(images);
+  const images = useSelector(
+    (state) => state.main.homePageData.homeCaroselData
+  );
+  // console.log(images);
   return (
     <section
       className="w-full h-full py-[40px]"
@@ -27,17 +29,18 @@ const Slider = () => {
             }}
           >
             <SplideTrack>
-              {images.map((item, index) => (
-                <SplideSlide key={index} className="w-full">
-                  <div className="w-full h-[540px] rounded-2xl overflow-hidden">
-                    <img
-                      src={item.image_link}
-                      alt={item.alt}
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </div>
-                </SplideSlide>
-              ))}
+              {images &&
+                images.map((item, index) => (
+                  <SplideSlide key={index} className="w-full">
+                    <div className="w-full h-[540px] rounded-2xl overflow-hidden">
+                      <img
+                        src={item.image_link}
+                        alt={item.alt}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                  </SplideSlide>
+                ))}
             </SplideTrack>
 
             <div className="splide__arrows">

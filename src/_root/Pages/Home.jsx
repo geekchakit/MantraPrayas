@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ContactSection from "../layouts/ContactSection";
 import Courses from "../layouts/Courses";
 import Facuities from "../layouts/Facuities";
@@ -43,11 +43,15 @@ const Home = () => {
     // };
   }, []);
 
+  const images = useSelector(
+    (state) => state.main.homePageData.homeCaroselData
+  );
+
   return (
     <>
       <Hero />
       <Stats />
-      <Slider />
+      {images && <Slider />}
       <About1 />
       <WhyChoose />
       <Courses />
