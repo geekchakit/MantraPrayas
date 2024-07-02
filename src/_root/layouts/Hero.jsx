@@ -2,10 +2,11 @@ import { Button, Typography } from "@material-tailwind/react";
 import Wrapper from "../components/Wrapper";
 import { hero, imagesData } from "../../data/data";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
   const navigate = useNavigate();
-
+  const homePageData = useSelector((state) => state.main.homePageData.homePageText);
   return (
     <section id="Hero" className="w-full h-full relative">
       <img
@@ -26,7 +27,7 @@ const Hero = () => {
               color="white"
               data-aos="fade-up"
             >
-              Achieve Your Dreams with Mantra Prayas - Competitive Exam Coaching
+             {homePageData && homePageData[0].herosectiontext || "Achieve Your Dreams with Mantra Prayas -Ideal institute for IIT-JEE & NEET"}
             </Typography>
             <div className="flex flex-col gap-8 justify-between w-full h-full">
               <Typography
@@ -35,11 +36,12 @@ const Hero = () => {
                 color="white"
                 data-aos="fade-up"
               >
-                At Mantra Prayas, we transform aspirations into achievements.
+                {/* At Mantra Prayas, we transform aspirations into achievements.
                 With expert faculty, comprehensive materials, and a personalized
                 approach, we offer top-notch coaching for IIT-JEE, NEET, KVPY,
                 NTSE, ICAR, JET, and Olympiads. Unlock your true potential and
-                secure a bright future with us.
+                secure a bright future with us. */}
+                {homePageData && homePageData[0].discovervidyamurtitext || "Mantra Prayas (MP) is a coaching institute dedicated to excellence in teaching and focused on interdisciplinary learning. In consonance with our tradition of nurturing talent, we are in Bhilwara with intensive campus, the academic campus to guide you to attain success in IIT-JEE, NEET, KVPY, OLYMPIAD ( Junior science, Physics, Chemistry and Maths), NTSE and we are here with another initiative agriculture field also ICAR, JET. We add zeal in students performance to qualify these exams. We welcome you to experience transformation in your preparation and ability for the target exams through these intensive campus"}
               </Typography>
               <div className="flex flex-wrap gap-2">
                 <Button
