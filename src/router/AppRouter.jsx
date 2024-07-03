@@ -12,7 +12,7 @@ const Faculties = lazy(() => import("../_root/Pages/Faculties"));
 const Courses = lazy(() => import("../_root/Pages/Courses"));
 const Contact = lazy(() => import("../_root/Pages/Contact"));
 const Brochure = lazy(() => import("../_root/Pages/Brochure"));
-
+const PrivacyPolicy = lazy(() => import("../_root/Pages/PrivacyPolicy"));
 const AppRouter = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +53,10 @@ const AppRouter = createBrowserRouter([
       {
         path: RouterData.brochure,
         element: <Brochure />,
+      },
+      {
+        path: RouterData.privacyPolicy,
+        element: <PrivacyPolicy />,
       },
     ],
   },

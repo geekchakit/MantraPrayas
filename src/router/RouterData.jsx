@@ -7,4 +7,5 @@ export const RouterData = {
   contact: "/contact",
   resourses: "/resourses",
   studyMaterials: "/study-materials",
+  privacyPolicy: "/privacy-policy",
 };
