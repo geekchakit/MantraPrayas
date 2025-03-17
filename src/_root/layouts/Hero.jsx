@@ -78,7 +78,7 @@ const Hero = () => {
         </Wrapper>
         <div className="w-full lg:h-auto overflow-hidden  mx-auto sm:px-4">
           <img
-            src={"/assets/heroImage4.png"}
+            src={"/assets/heroImage5.png"}
             alt="MantraPrayas Study Center"
             className="w-full object-contain scale-[1]  sm:mt-0"
           />

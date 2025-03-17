@@ -56,7 +56,7 @@ export const primaryLinks = [
 ];
 
 export const appData = {
-  link: "",
+  link: "https://play.google.com/store/apps/details?id=com.onlinetestpanel.prayas",
 };
 
 export const socialMediaLinks = {
