@@ -24,14 +24,25 @@ const PlayStoreAd = () => {
             >
               Get the best coaching experience with our app. Download now!
             </Typography>
-            <Button
-              onClick={() => {
-                window.location.href = appData.link;
-              }}
-              className="bg-transparent w-full h-full max-w-[200px] shadow-none hover:shadow-none p-0 mt-8"
-            >
-              <img src="./assets/playstore.webp" />
-            </Button>
+            <div>
+              <Button
+                onClick={() => {
+                  window.location.href = appData.link;
+                }}
+                className="bg-transparent w-full h-full max-w-[200px] shadow-none hover:shadow-none p-0 mt-8"
+              >
+                <img src="./assets/playstore.webp" />
+              </Button>
+              <Button
+                onClick={() => {
+                  window.location.href =
+                    "https://apps.apple.com/us/app/mantra-prayas/id6742650800";
+                }}
+                className="bg-transparent w-full h-full max-w-[200px] shadow-none hover:shadow-none p-0 mt-8"
+              >
+                <img src="./assets/appstore.png" />
+              </Button>
+            </div>
           </div>
           <div
             className="w-full h-full max-w-[800px] mx-auto"
