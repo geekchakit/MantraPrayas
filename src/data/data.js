@@ -91,11 +91,11 @@ export const statsData = {
   },
   card3: {
     h3: "70%",
-    p: "Average selection percentage in JEE",
+    p: "Average selection in JEE-IIT ",
   },
   card4: {
-    h3: "50",
-    p: "Average selection percent in NEET",
+    h3: "85",
+    p: "Average percent in Board Exam",
   },
 };
 

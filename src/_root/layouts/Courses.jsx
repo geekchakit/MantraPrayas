@@ -7,10 +7,25 @@ import ClassCard from "../components/ClassCard";
 import { useNavigate } from "react-router-dom";
 import { RouterData } from "../../router/RouterData";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import axios from "axios";
+import { API_URL } from "../../utils/Constant";
 
 const Courses = () => {
   const navigate = useNavigate();
   const homePageData = useSelector((state) => state.main.homePageData);
+
+  const [dataCourse, setDataCourse] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.post(`${API_URL}/getCourseDetails`);
+      console.log(res.data);
+      setDataCourse(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="py-[80px] gradient1 mt-[40px] relative">
@@ -94,7 +109,7 @@ const Courses = () => {
               }}
             >
               <SplideTrack>
-                {courses.classes.map((item, index) => (
+                {dataCourse.map((item, index) => (
                   <SplideSlide key={index}>
                     <ClassCard data={item} />
                   </SplideSlide>

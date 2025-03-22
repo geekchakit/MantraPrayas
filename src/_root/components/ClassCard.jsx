@@ -3,6 +3,8 @@ import { Typography } from "@material-tailwind/react";
 
 // eslint-disable-next-line no-unused-vars
 const ClassCard = ({ data }) => {
+  const extractClassNumber = (text) =>
+    parseInt(text.split(" ")[1].match(/\d+/)[0]);
   return (
     <div className="bg-white rounded-2xl p-8 font-primary text-MainBlack-500 border border-primary/20">
       <div className="relative flex flex-col items-center justify-center text-center">
@@ -17,7 +19,7 @@ const ClassCard = ({ data }) => {
             variant="h3"
             className="font-primary font-bold text-primary text-4xl"
           >
-            {data.class}
+            {extractClassNumber(data.classname)}
           </Typography>
           <Typography
             variant="paragraph"
@@ -27,14 +29,20 @@ const ClassCard = ({ data }) => {
           </Typography>
         </div>
         <Typography
+          variant="h5"
+          className="font-primary font-semibold text-2xl mt-4 text-center text-MainBlack-400"
+        >
+          {data.classname}
+        </Typography>
+        <Typography
           variant="h6"
           className="font-primary font-semibold text-2xl mt-4 text-center text-MainBlack-400"
         >
-          Class
+          {data.coursename}
         </Typography>
         <div className="mt-6">
           <span className="px-4 py-2 bg-MainPrimary-50 text-primary rounded-full">
-            {data.subjects}
+            {data.subject}
           </span>
         </div>
       </div>
