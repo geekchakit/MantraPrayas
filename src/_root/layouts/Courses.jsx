@@ -7,7 +7,7 @@ import ClassCard from "../components/ClassCard";
 import { useNavigate } from "react-router-dom";
 import { RouterData } from "../../router/RouterData";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import axios from "axios";
 import { API_URL } from "../../utils/Constant";
 
@@ -26,6 +26,8 @@ const Courses = () => {
       console.log(error);
     }
   };
+
+  useEffect(()=>{fetchData()},[])
 
   return (
     <div className="py-[80px] gradient1 mt-[40px] relative">
