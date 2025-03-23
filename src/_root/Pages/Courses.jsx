@@ -12,9 +12,23 @@ import { API_URL } from "../../utils/Constant";
 const Courses = () => {
   const [data, setData] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/getCoursesPageData`);
+
+        setData(res.data);
+        console.log(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   const [dataCourse, setDataCourse] = useState([]);
 
-  const fetchData = async () => {
+  const fetchDataL = async () => {
     try {
       const res = await axios.post(`${API_URL}/getCourseDetails`);
       console.log(res.data);
@@ -25,7 +39,7 @@ const Courses = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    fetchDataL();
   }, []);
 
   return (
