@@ -3,8 +3,7 @@ import { Typography } from "@material-tailwind/react";
 
 // eslint-disable-next-line no-unused-vars
 const ClassCard = ({ data }) => {
-  const extractClassNumber = (text) =>
-    parseInt(text.split(" ")[1].match(/\d+/)[0]);
+  const extractClassNumber = (text) => parseInt(text?.match(/\d+/)[0]);
   return (
     <div className="bg-white rounded-2xl p-8 font-primary text-MainBlack-500 border border-primary/20">
       <div className="relative flex flex-col items-center justify-center text-center">

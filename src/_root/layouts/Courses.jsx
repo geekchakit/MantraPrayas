@@ -109,7 +109,7 @@ const Courses = () => {
               }}
             >
               <SplideTrack>
-                {dataCourse.map((item, index) => (
+                {dataCourse?.map((item, index) => (
                   <SplideSlide key={index}>
                     <ClassCard data={item} />
                   </SplideSlide>
